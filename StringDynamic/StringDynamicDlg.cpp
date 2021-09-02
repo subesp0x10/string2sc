@@ -169,7 +169,7 @@ void CStringDynamicDlg::Work()
 	m_EditOutput.Empty();
 
 	CString c;
-	int d;
+	int d = 0;
 
 	unsigned char input[2048] = { 0 };
 
@@ -224,7 +224,7 @@ void CStringDynamicDlg::Work()
 
 	}
 
-	str_output.Format(_T("%s %s[%d]={0};\r\n\r\n"), c, str_variable, nTotalBytes / d);
+	str_output.Format(_T("/*\r\n%s\r\n*/\r\n%s %s[%d]={0};\r\n\r\n"), str_input, c, str_variable, nTotalBytes / d);
 
 	
 
